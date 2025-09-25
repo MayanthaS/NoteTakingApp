@@ -1,0 +1,29 @@
+/*---Reset----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/*--comommn--*/
+body{
+    background-color:darkblue ;
+}
+button{
+    cursor: pointer;
+    border: none;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    transition:all 0.3s ease-in ;
+}
+button:hover{
+    background-color: #fff i !important;
+    color: #000 !important;
+}
+input,textarea,table{
+    font-size: 1rem;
+}
+::placeholder{
+    font-size: 0.9rem;
+}
+/*header*/
