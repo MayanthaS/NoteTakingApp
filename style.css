@@ -99,3 +99,48 @@ textarea{
     background-color:#810404 ;
     color: #fff;
 }
+/*tabel styling*/
+.container .table{
+    background-color: #fff;
+    width: 50%;
+    max-height:260px ;
+    padding: 10px;
+    margin-left: 10px;
+    overflow: auto;
+}
+.container .table table{
+    width: 100%;
+    background-color: #0984e3;
+}
+.container .table table,
+.container .table table td{
+    border: 2px #fff solid;
+    border-collapse: collapse;
+    padding: 5px;
+}
+.container .table table th {
+    padding: 5px;
+    text-align: left;
+    background-color: #636e72;
+}
+.container .table table th:last-child,
+.container .table table th:nth-last-child(2){
+    text-align: center;
+}
+.container .table table .btcellv,
+container .table table .btcelld{
+    text-align: center;
+}
+.container .table td{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow:ellipsis ;
+}
+.container .table table .btcellv button{
+    background-color: #06612f;
+    color: #000;
+}
+.container .table table .btcelld button{
+    background-color: #810404;
+    color: #fff;
+}
