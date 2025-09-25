@@ -27,3 +27,22 @@ input,textarea,table{
     font-size: 0.9rem;
 }
 /*header*/
+header{
+    background-color: #0984e3;
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+header.logo{
+    background-color: #fff;
+    color: #0984e3;
+    padding: 5px;
+}
+header.search input{
+    width: 250px;
+    height: 30px;
+    padding: 16px 10px;
+}
