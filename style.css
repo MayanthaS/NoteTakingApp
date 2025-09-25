@@ -144,3 +144,27 @@ container .table table .btcelld{
     background-color: #810404;
     color: #fff;
 }
+
+/*responsiveness*/
+
+@media(max-width:750px){
+    header{
+        flex-direction: column;
+    }
+    header .logo{
+        margin-bottom: 10px;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .container .inp-frm,
+    .container .table{
+        margin-bottom:10px ;
+        max-width: 250px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+   
+}
