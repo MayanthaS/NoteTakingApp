@@ -1,13 +1,32 @@
 /*variabel*/
 var form = document.getElementById('add-frm');
+var items = document.getElementById('items');
 var ntitle = document.getElementById('n-title');
 var nbody = document.getElementById('n-body');
+var tableDiv = document.getElementById('tbl-div');
+
+
+var noteCount = 0;
+var newNote = 0;
+
+
 
 
 //---Events---
 form.addEventListener('submit',addNote);
 
 //--Function---
+
+// Updatetable
+function updateTable(){
+    //Display the table when notes get added
+    if(noteCount >0){
+        tableDiv.style.display = '';
+    }
+    else{
+        tableDiv.style.display ='none';
+    }
+}
 
 //add Note
 function addNote(e){
@@ -54,6 +73,13 @@ function addNote(e){
         tr.appendChild(td2);
         tr.appendChild(td3);
 
-        console.log(tr);
+        //increment note count
+        noteCount++;
+
+       //set new note
+       newNote = tr ;
+
+       //add or update the note of the value
+       updateTable();
     }
 }
