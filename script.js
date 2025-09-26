@@ -49,7 +49,11 @@ function addNote(e){
         btn2.setAttribute('id','del');
         td3.appendChild(btn2);
 
+        // add all tds a tr
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
 
-        console.log(td3);
+        console.log(tr);
     }
 }
