@@ -4,7 +4,7 @@ var items = document.getElementById('items');
 var ntitle = document.getElementById('n-title');
 var nbody = document.getElementById('n-body');
 var tableDiv = document.getElementById('tbl-div');
-var search = document.getElementById('srh');
+var search = document.getElementById('srch');
 
 var noteCount = 0;
 var newNote = 0;
@@ -50,7 +50,7 @@ function addNote(e){
         //create a new note record
         //New tr
         var tr = document.createElement('tr');
-        tr.className = 'items';
+        tr.className = 'item';
 
         //new td for title and body
         
@@ -95,7 +95,23 @@ function addNote(e){
 
 //search notes
 function searchNotes(e){
-    //text to lover case
-    var searchTxt = e .target.value.toLowerCase();
-    console.log(searchTxt);
+    // Text to lower case
+    var searchTxt = e.target.value.toLowerCase();
+
+    // Get list
+    var list = items.getElementsByClassName('item');
+
+    // Convert to an array
+    var listArr = Array.from(list);
+    listArr.forEach(function(item){
+        // Get title
+        var noteTitle = item.firstChild.textContent;
+        // Match
+        if(noteTitle.toLowerCase().indexOf(searchTxt) != -1){
+            item.style.display = '';
+        }
+        else{
+            item.style.display = 'none';
+        }
+    });
 }
