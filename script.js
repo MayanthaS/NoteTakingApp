@@ -4,7 +4,7 @@ var items = document.getElementById('items');
 var ntitle = document.getElementById('n-title');
 var nbody = document.getElementById('n-body');
 var tableDiv = document.getElementById('tbl-div');
-
+var search = document.getElementById('srh');
 
 var noteCount = 0;
 var newNote = 0;
@@ -19,6 +19,9 @@ form.addEventListener('submit',addNote);
 window.onload = updateTable;
 
 form.addEventListener('submit',addNote);
+
+//for search
+search.addEventListener('keyup',searchNotes);
 
 //--Function---
 
@@ -88,4 +91,11 @@ function addNote(e){
        //add or update the note of the value
        updateTable();
     }
+}
+
+//search notes
+function searchNotes(e){
+    //text to lover case
+    var searchTxt = e .target.value.toLowerCase();
+    console.log(searchTxt);
 }
