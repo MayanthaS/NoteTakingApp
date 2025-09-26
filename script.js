@@ -15,6 +15,11 @@ var newNote = 0;
 //---Events---
 form.addEventListener('submit',addNote);
 
+//for page 
+window.onload = updateTable;
+
+form.addEventListener('submit',addNote);
+
 //--Function---
 
 // Updatetable
@@ -22,6 +27,7 @@ function updateTable(){
     //Display the table when notes get added
     if(noteCount >0){
         tableDiv.style.display = '';
+        items.appendChild(newNote);
     }
     else{
         tableDiv.style.display ='none';

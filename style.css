@@ -112,6 +112,9 @@ textarea{
     width: 100%;
     background-color: #0984e3;
 }
+.container .table .note-body{
+    display: none;
+}
 .container .table table,
 .container .table table td{
     border: 2px #fff solid;
@@ -136,11 +139,12 @@ container .table table .btcelld{
     overflow: hidden;
     text-overflow:ellipsis ;
 }
-.container .table table .btcellv button{
+ .container .table table .btcellv button{
     background-color: #06612f;
-    color: #000;
+    color: #fff;
+   
 }
-.container .table table .btcelld button{
+.container .table table .btcelld button {
     background-color: #810404;
     color: #fff;
 }
