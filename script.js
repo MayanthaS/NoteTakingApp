@@ -13,6 +13,7 @@ var newNote = 0;
 
 
 //---Events---
+//form submit
 form.addEventListener('submit',addNote);
 
 //for page 
@@ -22,6 +23,9 @@ form.addEventListener('submit',addNote);
 
 //for search
 search.addEventListener('keyup',searchNotes);
+
+//for Remove 
+items.addEventListener('click',removeNote);
 
 //--Function---
 
@@ -114,4 +118,19 @@ function searchNotes(e){
             item.style.display = 'none';
         }
     });
+}
+
+//remove note
+function removeNote(e){
+    if(e.target.id ==='del'){
+        if(confirm('Are you sure?')){
+            //Delete the note
+            var tr = e.target.parentElement.parentElement;
+            items.removeChild(tr);
+            noteCount--;
+            if(noteCount ==0){
+                updateTable();
+            }
+        }
+    }
 }
