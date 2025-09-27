@@ -30,6 +30,11 @@ search.addEventListener('keyup',searchNotes);
 
 //for Remove 
 items.addEventListener('click',removeNote);
+//for view and update
+items.addEventListener('click',viewNUpdate);
+
+//for reset
+resetBtn.addEventListener('click',resetAll);
 
 //--Function---
 
@@ -161,4 +166,12 @@ function viewNUpdate(e){
         nbody.value = note.lastChild.textContent;
         isUpdate = true;
      }
+}
+
+//reset all
+function resetAll(){
+    ntitle.value ='';
+    nbody.value ='';
+    isUpdate = false;
+    newNote ='';
 }
