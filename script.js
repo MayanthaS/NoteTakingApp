@@ -11,7 +11,7 @@ var newNote = '';
 var isUpdate = false;
 var record ='';
 var note = '';
-var body = '';
+var nbody = '';
 
 
 
@@ -38,7 +38,19 @@ function updateTable(){
     //Display the table when notes get added
     if(noteCount >0){
         tableDiv.style.display = '';
-        items.appendChild(newNote);
+        
+        //update note
+        if(isUpdate == true){
+            note.firstChild.textContent =ntitle.value;
+            note.lastChild.textContent = nbody.valuel;
+            //reset update and notecount
+            isUpdate = false;
+            noteCount--;
+        }
+        else{
+            //add new note
+            items.appendChild(newNote);
+        }
     }
     else{
         tableDiv.style.display ='none';
@@ -137,4 +149,16 @@ function removeNote(e){
             }
         }
     }
+}
+
+//view and update a note
+function viewNUpdate(e){
+    if(e.target.id ==='vw'){
+        //get the element values &update input feilds
+        record = e.target.parentElement.parentElement;
+        note =  record.firstChild.textContent;
+        ntitle.value= note.firstChild.textContent;
+        nbody.value = note.lastChild.textContent;
+        isUpdate = true;
+     }
 }
