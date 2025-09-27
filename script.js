@@ -7,7 +7,11 @@ var tableDiv = document.getElementById('tbl-div');
 var search = document.getElementById('srch');
 
 var noteCount = 0;
-var newNote = 0;
+var newNote = '';
+var isUpdate = false;
+var record ='';
+var note = '';
+var body = '';
 
 
 
